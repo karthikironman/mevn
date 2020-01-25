@@ -4,8 +4,8 @@
     <h1 class="fontbangers" v-if="show">SIGNUP</h1>
     <h1 class="fontbangers" v-if="!show">LOGIN</h1>
     <p>
-      <span v-if="show" >already have an account ,</span>
-       <span v-if="!show" >don't have an account ,</span>
+      <span v-if="show">already have an account ,</span>
+      <span v-if="!show">don't have an account ,</span>
       <span @click="show=!show" class="redirectlogin" v-if="show">login</span>
       <span @click="show=!show" class="redirectlogin" v-if="!show">signup</span>
     </p>
@@ -62,10 +62,9 @@
         <b-form-select id="input-5" v-model="form.college" :options="colleges" required></b-form-select>
       </b-form-group>
 
-      <b-button class="fontbangers" type="submit" variant="primary">Submit</b-button>
+      <b-button class="fontbangers" type="submit" variant="primary">Signup</b-button>
     </b-form>
-     <b-form @submit="onSubmit" v-if="!show">
-
+    <b-form @submit="onSubmit" v-if="!show">
       <b-form-group
         class="fontbangers"
         id="input-group-1"
@@ -104,7 +103,6 @@
         </div>
       </b-form-group>
       <b-button class="fontbangers" type="submit" variant="primary" v-if="!show">Login</b-button>
-      <b-button class="fontbangers" type="submit" variant="primary" v-if="show">Signup</b-button>
     </b-form>
   </div>
 </template>
@@ -121,9 +119,9 @@ export default {
         college: null,
         stream: null
       },
-      login:{
-        email:"",
-        password:""
+      login: {
+        email: "",
+        password: ""
       },
       ptype: "password",
       streams: ["test"],
@@ -182,7 +180,7 @@ export default {
   text-decoration: underline;
 }
 .fontbangers {
- font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
 }
 .passwordshow {
   padding-bottom: 35px;
